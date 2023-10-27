@@ -1,0 +1,22 @@
+[{
+  "id":10,
+  "title":"Beyaz zambaklar ülkesinde",
+  "bookYear":"1923",
+  "author":"Grigory Petrov",
+  "pressName":"Yayınevi",
+  "isbn":"313215165651"}
+,{
+  "id":20,
+  "title":"Yüzüklerin efendisi",
+  "bookYear":"1960",
+  "author":"J.R.R Tolkien",
+  "pressName":"Z yayınevi",
+  "isbn":"3165465165"}
+,{
+  "id":30,
+  "title":"Keyfimin Kahyası",
+  "bookYear":"2023",
+  "author":"Emre ILGAR",
+  "pressName":"EMRE YAYINEVİ",
+  "isbn":"13165616515"
+}]

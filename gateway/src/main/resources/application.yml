@@ -1,0 +1,34 @@
+server:
+  port: 7777
+spring:
+  zipkin:
+    enabled: true
+    base-url: http://localhost:9411
+    service:
+      name: gateway
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      routes:
+        - id: book-service
+          uri: lb://book-service # lb->load balance
+          predicates:
+            - Path=/api/v1/book/**
+        - id: library-service
+          uri: lb://library-service # lb->load balance
+          predicates:
+            - Path=/api/v1/library/**
+  application:
+    name: gateway-service
+
+    discovery:
+      locator:
+        enabled: true
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+    instance:
+      prefer-ip-address: true

@@ -1,0 +1,7 @@
+rootProject.name = 'LibraryMicroServiceProject'
+include 'book-service'
+include 'library-service'
+include 'eureka-service'
+include 'gateway'
+include 'configserver'
+

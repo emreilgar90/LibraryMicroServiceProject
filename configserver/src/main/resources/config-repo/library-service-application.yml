@@ -1,0 +1,44 @@
+server:
+  port: 0
+
+spring:
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+  zipkin:
+    base-url: http://localhost:9411
+    enabled: true
+    service:
+      name: library-service
+  datasource:
+    url: jdbc:h2:mem:library
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  jpa:
+    database: h2
+    hibernate:
+      ddl-auto: create-drop
+      show-sql: true
+
+
+
+
+
+
+  application:
+    name: library-service
+  eureka:
+   instance:
+    instance-id: ${spring.application.name}:${random.value}
+    prefer-ip-address: true
+   client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+
+
+
+
+
